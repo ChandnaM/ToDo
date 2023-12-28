@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins','sans-serif';
+    box-sizing:border-box;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#153677,#4e08ff);
+    padding:10px;
+}
+.todo-app{
+    width:100%;
+    width:450px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 31px 43px;
+    margin:30px auto 5px;
+    /* horizontally centered as left and right margin auto */
+}
+.todo-app h2{
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+}
+ .todo-app h2 img{
+    height:40px;
+    width:40px;
+    margin-right:10px;
+}
+.row{
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#input-box{
+    flex:1;
+    outline:none;
+    border:none;
+    font-size:18px;
+    color:#9c9c9c;
+    padding:10px;
+}
+.btn{
+    outline:none;
+    border:none;
+    cursor: pointer;
+    background: #ff5945;
+    color:#fff;
+    padding:16px 50px;
+    border-radius: 10px;
+}
+ul li{
+    list-style:none;
+    font-size:16px;
+    padding: 12px 8px 20px 50px;
+    cursor:pointer;
+    user-select: none;
+    position:relative;
+    display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center content */
+}
+ul li::before{
+    content:'';
+    /* position:absolute; */
+    height:28px;
+    width:28px;
+    border-radius:50%;
+    margin-right:10px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span{
+    width:40px;
+    height:40px;
+    right:0;
+    text-align: center;
+    position:absolute;
+    line-height:40px;
+    font-size:22px;
+    top:5px;
+    color:#555;
+}
+/* right: 0;: This property, along with position: absolute;, positions the 
+<span> element to the right edge of its relatively positioned parent element. In this case, 
+the parent is likely the <li> item. right: 0; means it's aligned to the right side. */
+/*  line-height: It makes the text or icon centered vertically within the 40px height of the <span>. The line-height property is similar to 
+height, but it affects the spacing within the element, not its overall size. */
+ul li span:hover{
+    background:#edeef0;
+}
